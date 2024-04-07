@@ -1,14 +1,7 @@
 /* eslint-disable react/prop-types */
 import css from "./Feedback.module.css";
 
-const Feedback = ({
-  positiveFeedback,
-  totalFeedback,
-  stats: { good, bad, neutral },
-}) => {
-  if (totalFeedback === 0) {
-    return null;
-  }
+const Feedback = ({ positiveFeedback, stats: { good, bad, neutral } }) => {
   return (
     <div className={css.box}>
       <ul className={css.list}>

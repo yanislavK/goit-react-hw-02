@@ -26,13 +26,20 @@ const App = () => {
   return (
     <>
       <Description />
-      <Options update={updateFeedback} reset={resetFeedback} />
-      <Feedback
-        stats={stats}
+      <Options
+        update={updateFeedback}
+        reset={resetFeedback}
         totalFeedback={totalFeedback}
-        positiveFeedback={positiveFeedback}
       />
-      <Notification totalFeedback={totalFeedback} />
+      {totalFeedback != 0 ? (
+        <Feedback
+          stats={stats}
+          totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
+        />
+      ) : (
+        <Notification totalFeedback={totalFeedback} />
+      )}
     </>
   );
 };

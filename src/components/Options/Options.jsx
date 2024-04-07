@@ -2,13 +2,14 @@
 import css from "./Options.module.css";
 
 // eslint-disable-next-line react/prop-types
-const Options = ({ update, reset }) => {
+const Options = ({ update, reset, totalFeedback }) => {
   return (
     <div className={css.box}>
       <button onClick={() => update("good")}>good</button>
       <button onClick={() => update("bad")}>bad</button>
       <button onClick={() => update("neutral")}>neutral</button>
-      <button onClick={() => reset()}>reset</button>
+      {totalFeedback != 0 && <button onClick={() => reset()}>reset</button>}
+      {console.log(totalFeedback)}
     </div>
   );
 };

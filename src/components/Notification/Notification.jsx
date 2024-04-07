@@ -1,8 +1,5 @@
 // eslint-disable-next-line react/prop-types
-const Notification = ({ totalFeedback }) => {
-  if (totalFeedback !== 0) {
-    return null;
-  }
+const Notification = () => {
   return (
     <div>
       <span>No feedback yet</span>
