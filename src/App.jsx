@@ -38,7 +38,7 @@ const App = () => {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <Notification totalFeedback={totalFeedback} />
+        <Notification />
       )}
     </>
   );
